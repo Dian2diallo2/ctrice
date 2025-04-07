@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.contener {
+    background-color: #ff6347;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.ecran {
+    background-color: #7fffd4;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    font-size: 28px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.touche {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 10px;
+}
+.buton {
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.1s;
+    box-shadow: 0 3px #d3d3d3;
+}
+.buton:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px #a9a9a9;
+}
+.buton[data-key="8"] {
+    background-color: #ffa500;
+    color: white;
+    font-weight: bold;
+}
+.buton[data-key="13"] {
+    background-color: #32cd32;
+    color: white;
+    font-weight: bold;
+    grid-column: span 2;
+}
